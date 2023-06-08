@@ -8,15 +8,21 @@ export async function POST(req, res) {
   const data = await req.json();
 
   //   Insert the rows into the BigQuery table
-  const [apiResponse] = await bigquery
-    .dataset(datasetId)
-    .table(tableId)
-    .insert(data);
+  // const [apiResponse] = await bigquery
+  //   .dataset(datasetId)
+  //   .table(tableId)
+  //   .insert(data);
 
+  // return NextResponse.json({
+  //   status: 200,
+  //   success: true,
+  //   ok: true,
+  //   response: apiResponse,
+  // });
   return NextResponse.json({
     status: 200,
     success: true,
     ok: true,
-    response: apiResponse,
+    response: "Success!",
   });
 }

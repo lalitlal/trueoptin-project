@@ -64,7 +64,7 @@ const InputSignupForm = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       router.push("/demo");
-    }, 500);
+    }, 10);
   };
 
   const maxDescription = 70;
