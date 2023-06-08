@@ -26,7 +26,7 @@ const TrueOptinCTA = ({ currentPage, setCurrentPage }) => {
               // This Works below:
               // w-full h-full justify-center items-center ease-in-out duration-300 object-cover (can use object-contain) also
               src={imageURL}
-              className="object-contain absolute top-0 left-0 w-full h-full" //h-auto
+              className="absolute top-0 left-0 w-full h-full" //h-auto
               alt=""
             />
           </div>

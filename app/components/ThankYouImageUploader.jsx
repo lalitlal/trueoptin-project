@@ -3,7 +3,7 @@
 import { useContext, useState } from "react";
 import { AdContext } from "../context/AdContext";
 
-function ImageUploader() {
+function ThankYouImageUploader() {
   const adContext = useContext(AdContext);
 
   const handleFileChange = (event) => {
@@ -15,11 +15,7 @@ function ImageUploader() {
       const image = new Image();
       image.src = event.target.result;
       image.onload = () => {
-        // adContext.setImageDimensions({
-        //   width: image.width,
-        //   height: image.height,
-        // });
-        adContext.setImageData(event.target.result);
+        adContext.setThankYouImageData(event.target.result);
       };
     };
 
@@ -29,13 +25,13 @@ function ImageUploader() {
   return (
     <div>
       <label
-        htmlFor="image-upload"
+        htmlFor="thankyouimage-upload"
         className="cursor-pointer bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline relative h-full w-full flex justify-center items-center"
       >
         Upload Image
       </label>
       <input
-        id="image-upload"
+        id="thankyouimage-upload"
         type="file"
         accept="image/*"
         className="hidden"
@@ -45,4 +41,4 @@ function ImageUploader() {
   );
 }
 
-export default ImageUploader;
+export default ThankYouImageUploader;

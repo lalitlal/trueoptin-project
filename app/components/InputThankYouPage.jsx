@@ -3,10 +3,12 @@ import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 import { AdContext } from "../context/AdContext";
 import ImageUploader from "./ImageUploader";
+import ThankYouImageUploader from "./ThankYouImageUploader";
 
 const InputThankYouPage = () => {
   const router = useRouter();
   const adcontext = useContext(AdContext);
+  const imageUploader = <ThankYouImageUploader></ThankYouImageUploader>;
   const [formData, setFormData] = useState({
     thankYouHeadline: "",
     thankYouDescription: "",
@@ -158,9 +160,7 @@ const InputThankYouPage = () => {
         )}
       </div>
 
-      <div className="mb-4">
-        <ImageUploader></ImageUploader>
-      </div>
+      <div className="mb-4">{imageUploader}</div>
       <button
         type="submit"
         className={`bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline relative w-full h-full ${

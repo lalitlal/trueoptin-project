@@ -11,8 +11,9 @@ export const AdProvider = ({ children }) => {
   const [cta, setCTA] = useState("Your CTA Here");
   const [headline, setHeadline] = useState("Your headline Here");
   const [description, setDescription] = useState("Your Description Here");
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
   const [imageData, setImageData] = useState(null);
+  const [thankYouImageData, setThankYouImageData] = useState(null);
   const [imageDimensions, setImageDimensions] = useState({
     width: 0,
     height: 0,
@@ -46,7 +47,7 @@ export const AdProvider = ({ children }) => {
         cta,
         headline,
         description,
-        image,
+        // image,
         imageData,
         imageDimensions,
         seeForm,
@@ -61,6 +62,8 @@ export const AdProvider = ({ children }) => {
         signupCTA,
         signupDescription,
         signupHeadline,
+        thankYouImageData,
+        setThankYouImageData,
         setSignupCTA,
         setSignupDescription,
         setSignupHeadline,
@@ -75,7 +78,7 @@ export const AdProvider = ({ children }) => {
         setSeeForm,
         setImageData,
         setImageDimensions,
-        setImage,
+        // setImage,
         setCTA,
         setHeadline,
         setDescription,

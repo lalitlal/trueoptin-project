@@ -12,18 +12,18 @@ const TrueOptinThankYou = ({ currentPage, setCurrentPage }) => {
   });
 
   let imageURL = "/assets/hero-bands.jpg";
-  if (adContext.imageData !== null) {
-    imageURL = adContext.imageData;
+  if (adContext.thankYouImageData !== null) {
+    imageURL = adContext.thankYouImageData;
   }
   return (
     <section class="text-gray-600 body-font overflow-hidden">
       <div className="mx-auto w-full min-w-80 flex flex-col justify-center">
         <div className="my-5 w-full h-1/2 flex-col justify-center border-black border-2">
-          <div class="flex-col sm:flex-row sm:items-center items-start justify-center">
+          <div class="relative w-full h-[300px] flex-col sm:flex-row sm:items-center items-start justify-center">
             <img
               // src="/assets/hero-bands.jpg"
               src={imageURL}
-              className="w-full md:w-full h-[30vh] sm:h-auto max-h-[30vh] justify-center items-center ease-in-out duration-300  object-cover" //h-auto
+              className="absolute top-0 left-0 w-full h-full" //h-auto
               alt=""
             />
           </div>
