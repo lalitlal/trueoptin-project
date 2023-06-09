@@ -64,7 +64,9 @@ const InputThankYouPage = () => {
     setIsSubmitting(true);
 
     // Simulate a loading delay of 2 seconds
+    adcontext.setIsDeployed(true);
     router.push("/demo");
+    adcontext.setCurrentPage(0);
     setIsSubmitting(false);
   };
 
@@ -191,10 +193,9 @@ const InputThankYouPage = () => {
         ) : (
           <div
             className="flex justify-center items-center"
-            onClick={() => {
-              adcontext.setCurrentPage(0);
-              adcontext.setIsDeployed(true);
-            }}
+            // onClick={() => {
+            //   adcontext.setIsDeployed(true);
+            // }}
           >
             Deploy
           </div>

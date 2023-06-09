@@ -61,7 +61,9 @@ const InputSignupForm = () => {
     setIsSubmitting(true);
 
     // Simulate a loading delay of 2 seconds
+    adcontext.setIsDeployed(true);
     router.push("/demo");
+    adcontext.setCurrentPage(0);
     setIsSubmitting(false);
   };
 
@@ -184,10 +186,10 @@ const InputSignupForm = () => {
         ) : (
           <div
             className="flex justify-center items-center"
-            onClick={() => {
-              adcontext.setCurrentPage(0);
-              adcontext.setIsDeployed(true);
-            }}
+            // onClick={() => {
+            //   adcontext.setCurrentPage(0);
+            //   adcontext.setIsDeployed(true);
+            // }}
           >
             Deploy
           </div>
