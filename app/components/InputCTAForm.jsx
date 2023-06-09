@@ -65,10 +65,8 @@ const InputCTAForm = () => {
     setIsSubmitting(true);
 
     // Simulate a loading delay of 2 seconds
-    setTimeout(() => {
-      setIsSubmitting(false);
-      router.push("/demo");
-    }, 100);
+    router.push("/demo");
+    setIsSubmitting(false);
   };
 
   const maxDescription = 70;
