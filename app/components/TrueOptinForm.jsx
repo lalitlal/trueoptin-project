@@ -13,23 +13,20 @@ const TrueOptinForm = ({ currentPage, setCurrentPage }) => {
   const handleFormSubmit = async () => {
     if (adContext.isDeployed) {
       try {
-        const response = await fetch("/submitBQData", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        // const response = await fetch("/submitBQData", {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify(formData),
+        // });
 
-        if (response.status == 200) {
-          const data = await response.json();
-          console.log("Data submitted successfully:", data);
-        } else {
-          throw new Error("Failed to submit data to BigQuery");
-        }
-        // setTimeout(() => {
-        //   setCurrentPage(2);
-        // }, 2500);
+        // if (response.status == 200) {
+        //   const data = await response.json();
+        //   console.log("Data submitted successfully:", data);
+        // } else {
+        //   throw new Error("Failed to submit data to BigQuery");
+        // }
         setCurrentPage(2);
       } catch (error) {
         console.error("Error submitting data to BigQuery:", error);

@@ -64,7 +64,7 @@ const InputSignupForm = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       router.push("/demo");
-    }, 10);
+    }, 100);
   };
 
   const maxDescription = 70;
@@ -187,6 +187,7 @@ const InputSignupForm = () => {
           <div
             className="flex justify-center items-center"
             onClick={() => {
+              adcontext.setCurrentPage(0);
               adcontext.setIsDeployed(true);
             }}
           >
